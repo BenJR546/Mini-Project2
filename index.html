@@ -1,3 +1,6 @@
+
+
+</article>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +10,7 @@
     <link rel="stylesheet" href="assets\css\stylesheet.css">
 </head>
 <body>
-    <header>
+    <header><!--i have given almost every element an ID in case something specific needs worked on-->
         <h1 id="headerTitle">CSS Snippet Cheatsheet</h1>
             <p id="headerText">
                 Ever have trouble recalling the exact syntax for your favorite CSS code?
@@ -15,17 +18,17 @@
                 and it'll automatically select all of the code for you to copy.
             </p>
     </header>
-<section class="cardGrid">    
-    <article class="card" id="flexBoxRowCard">
-        <h2 class="cardHeader" id="flexBoxRowHeader">
+<section class="cardGrid">    <!--card grid starts here-->
+    <article class="card" id="flexBoxRowCard"><!--ive tried to keep my naming consistent so tracking an ID down in future should be easy-->
+        <h2 class="cardHeader" id="flexBoxRowHeader"><!--flex box row card (+ line above)-->
             Flexbox Row
         </h2>
-            <p class="cardDescription" id="flexBoxRowDescription">
+        <p class="cardDescription" id="flexBoxRowDescription">
                 Use these three properties to create a Flexbox row layout.
-            </p>
+        </p>
         <div class="cardContent" id="flexBoxRowContent">
             <p class="cardCode" id="flexBoxRowCode">
-                <pre>
+                <pre><!--a <pre> element preserves the layout of text, keeping indenting and font on this code-->
 .row {
     display: flex;
     flex-direction: row;
@@ -35,13 +38,13 @@
             </p>
         </div>        
     </article>
-    <article class="card" id="flexBoxColumnCard">
+    <article class="card" id="flexBoxColumnCard"><!--flex box column card-->
         <h2 class="cardHeader" id="flexBoxColumnHeader">
             Flexbox Column
         </h2>
-            <p class="cardDescription" id="flexBoxColumnDescription">
+        <p class="cardDescription" id="flexBoxColumnDescription">
                 Use this to create a Flexbox column layout.
-            </p>
+        </p>
         <div class="cardContent" id="flexBoxColumnContent">
             <p class="cardCode" id="flexBoxColumnCode">
                 <pre>
@@ -53,13 +56,13 @@
             </p>
         </div>
     </article>
-    <article class="card" id="cssGridLayoutCard">
+    <article class="card" id="cssGridLayoutCard"><!--css grid layout card-->
         <h2 class="cardHeader" id="cssGridLayoutHeader">
             CSS Grid Layout
         </h2>
-            <p class="cardDescription" id="cssGirdLayoutDescription">
+        <p class="cardDescription" id="cssGirdLayoutDescription">
                 Build a 12-column layout using CSS Grid.
-            </p>
+        </p>
         <div class="cardContent" id="cssGridLayoutContent">
             <p class="cardCode" id="cssGridLayoutCode">
                 <pre>
@@ -73,13 +76,13 @@
             </p>
         </div>   
     </article>
-    <article class="card" id="linearGradientsCard">
+    <article class="card" id="linearGradientsCard"><!--linear gradients card-->
         <h2 class="cardHeader" id="linearGradientsHeader">
             Linear Gradients
         </h2>
-            <p class="cardDescription" id="linearGradientsDescription">
+        <p class="cardDescription" id="linearGradientsDescription">
                 This will create a linear gradient from top to bottom.
-            </p>
+        </p>
         <div class="cardContent" id="linearGradientsContent">
             <p class="cardCode" id="linearGradientsCode">
                 <pre>
@@ -94,13 +97,13 @@
         </div>
 
     </article>
-    <article class="card" id="boxTransitionGlowCard">
+    <article class="card" id="boxTransitionGlowCard"><!--box transition glow card-->
         <h2 class="cardHeader" id="boxTransitionGlowHeader">
             Box Transition Glow
         </h2>
-            <p class="cardDescription" id="boxTransitionGlowDescription">
+        <p class="cardDescription" id="boxTransitionGlowDescription">
                 Use transition and box shadows to glow on hover.
-            </p>
+        </p>
         <div class="cardContent" id="boxTransitionGlowContent">
             <p class="cardCode id=boxTransitionGlowCode">
                 <pre>
@@ -119,13 +122,13 @@
             </p>
         </div>      
     </article>
-    <article class="card" id="overlayCardWithTitleCard">
+    <article class="card" id="overlayCardWithTitleCard"><!--overlay card with title card-->
         <h2 class="cardHeader" id="overlayCardWithTitleHeader">
             Overlay Card with Title
         </h2>
-            <p class="cardDescription" id="overlayCardWithTitleDescription">
+        <p class="cardDescription" id="overlayCardWithTitleDescription">
                 Use position elements and negative margins to raise elements higher than their natural starting point.
-            </p>
+        </p>
         <div class="cardContent" id="overlayCardWithTitleContent">
             <p class="cardCode" id="overlayCardWithTitleCode">
                 <pre>
@@ -144,3 +147,22 @@ margin-top: -20px;
 </footer>
 </body>
 </html>
+
+<!--the general card layout should be:
+<article class="card" id="cardNameCard">
+    <h2 class="cardHeader" id="cardNameHearder">
+        *Card Title*
+    </h2>
+    <p class="cardDescription" id="cardNameDescription">
+        *Card Description*
+    </p>
+    <div class="cardContent" id="cardNameContent">
+        <p class="cardCode" id="cardNameCode" 
+            <pre>
+.your{                      *note, for code to style as expected, put it at the start of the line
+    code: goes (here)
+}    
+            </pre>
+        </p>
+    <div>
+    </article> -->
