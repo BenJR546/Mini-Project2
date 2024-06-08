@@ -15,7 +15,7 @@ here I am using it to set variables for easy color scheme experimentation and im
 for the whole document (excluding the code because they are in <pre> elements)*/
 body {
     background-color: var(--body-bg); 
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 /*aligning the header text to the center*/
 header { 
@@ -69,7 +69,7 @@ centers the text*/
 /*box-shadow determines the glow
 transition will have it fade in and out
 transform will make the card itself bigger*/
-.card:hover {
+.card:hover, .cardHeader:hover {
     box-shadow: inset 0 0 8px var(--gradient-bottom), 0 0 8px var(--gradient-top);
     transition:  all 0.5s ease-in-out; 
     transform: scale(1.03);
@@ -82,6 +82,7 @@ border-radius rounds the corners of the header
     border: 1px solid var(--card-border); 
     margin-top: -20px; 
     border-radius: 8px; 
+    text-align: center;
 }
 /*Locks the size of the header box*/
 .card .cardHeader{
@@ -93,6 +94,10 @@ keeps space around the discription and header*/
     margin-left: auto; 
     margin-right: auto; 
     padding: 8%; 
+}
+
+.card .cardDescription {
+    width: 80%;
 }
 /*rounds the border of the code cards
 sets the width of the element relative to the card
