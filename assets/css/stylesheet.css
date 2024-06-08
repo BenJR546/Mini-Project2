@@ -1,24 +1,29 @@
 :root {
     --body-bg: #111018;
-    --content-dark: #013601;
-    --content-light: #4DEC4D;
     --card-border-color: rgb(235, 191, 48);
-    --card-content-user-select: all;
+    --header-h1-text: #2200ff;
+    --header-content-text: #fd0000;
+    --gradient-top: #013601;
+    --gradient-bottom: #4DEC4D;
+    --footer-text: green;
+
 }
 
 body {
     background-color: var(--body-bg); 
+    font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 header { 
     text-align: center; 
+
 }
 header h1 {
-    color: var(--content-light); 
+    color: var(--header-h1-text); 
 }
 #headerText {
-    padding: 5%; 
+    padding: 2%; 
     padding-bottom: 0;
-    color: white; 
+    color: var(--header-content-text) 
 }
 .cardGrid {
     padding: 10%;;
@@ -48,7 +53,7 @@ header h1 {
     max-width: 80%; 
 }
 .card:hover {
-    box-shadow: inset 0 0 8px var(--content-light), 0 0 8px var(--content-dark);
+    box-shadow: inset 0 0 8px var(--gradient-bottom), 0 0 8px var(--gradient-top);
     transition:  all 0.5s ease-in-out; 
     transform: scale(1.03);
 }
@@ -86,14 +91,14 @@ header h1 {
     color: white; 
     background-color: black; 
 }
-.cardContent,.cardCode { background-image: linear-gradient(var(--content-dark) 0%, var(--content-light) 100%); 
+.cardContent,.cardCode { background-image: linear-gradient(var(--gradient-top) 0%, var(--gradient-bottom) 100%); 
 }
 .cardHeader,.cardDescription,.cardCode,.cardContent,.card { 
     background-color: black; 
 }
 footer {
      text-align: center; 
-     color: var(--content-light); 
+     color: var(--footer-text); 
     }
 @media screen and (max-width: 992px) {
     .cardGrid { grid-template-columns: repeat(2, minmax(200px, 1fr)); } 
