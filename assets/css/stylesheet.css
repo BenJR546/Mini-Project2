@@ -124,9 +124,8 @@ highlights all code text when selected*/
     background-color: var(--cardBackground); 
 }
 /*Centers the footer and colors it --footerText*/
-    a{
+    .footerText{
     text-align: center;
-    padding-left: 50%;
     color: var(--footerText); 
 }
 
