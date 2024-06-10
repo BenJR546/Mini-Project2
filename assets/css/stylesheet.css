@@ -1,37 +1,37 @@
 /*the root is esentially the parent to all elements. 
 here I am using it to set variables for easy color scheme experimentation and implimentatiom*/
 :root {
-    --body-bg: #111018;
-    --card-border: rgb(235, 191, 48);
-    --header-h1-text: #ffc109;
-    --header-content-text: #ffc109;
-    --gradient-top: #175d17;
-    --gradient-bottom: purple;
-    --footer-text: green;
-    --card-text: yellow;
-    --card-bg: black;
+    --bodyBackground: #111018;
+    --cardBorder: rgb(96, 243, 109);
+    --headerh1Text: #beff88;
+    --headerContentText: #00ff40;
+    ---gradientTop: #013b01;
+    ---gradientBottom: rgb(126, 179, 5);
+    --footerText: green;
+    --cardText: rgb(241, 241, 177);
+    --cardBackground: rgb(0, 0, 0);
 }
-/*this is setting the background's body to --body-bg and controlling the font family
+/*this is setting the background's body to --bodyBackground and controlling the font family
 for the whole document (excluding the code because they are in <pre> elements)*/
 body {
-    background-color: var(--body-bg); 
+    background-color: var(--bodyBackground); 
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 /*aligning the header text to the center*/
 header { 
     text-align: center; 
 }
-/*changing the main heading's color to --header-h1-text */
+/*changing the main heading's color to --headerh1Text */
 header h1 {
-    color: var(--header-h1-text); 
+    color: var(--headerh1Text); 
 }
 /*padding just to add some space between the heading and text.
 reverting the padding-bottom to 0 to bring the cards up a bit.
-changing the color to --header-content-text*/
+changing the color to --headerContentText*/
 #headerText {
     padding: 2%; 
     padding-bottom: 0;
-    color: var(--header-content-text) 
+    color: var(--headerContentText) 
 }
 /*padding to keep the cards more in-center.
 reverting the padding-top to keep the cards up high.
@@ -47,14 +47,14 @@ eaxh "1fr" will represent a column on the grid */
 flex with flex-wrap keeps the headings and code boxes centred.
 margin of 20px keeps the cards apart from eachother.
 border-radius rounds the corners of the main card section.
-sets the color to --card-text*/
+sets the color to --cardText*/
 .card {
-    border: 1px solid var(--card-border); 
+    border: 1px solid var(--cardBorder); 
     display: flex;  
     flex-wrap: wrap; 
     margin: 20px; 
     border-radius: 8px;
-    color: var(--card-text);
+    color: var(--cardText);
 }
 /*margin to put some distance between the code box and the edge of the card.*/
 .card .cardContent{
@@ -69,17 +69,17 @@ centers the text*/
 /*box-shadow determines the glow
 transition will have it fade in and out
 transform will make the card itself bigger*/
-.card:hover, .cardHeader:hover {
-    box-shadow: inset 0 0 8px var(--gradient-bottom), 0 0 8px var(--gradient-top);
+.card:hover, .cardHeader:hover, .cardCode:hover {
+    box-shadow: inset 0 0 10px var(---gradientBottom), 0 0 8px var(---gradientTop);
     transition:  all 0.5s ease-in-out; 
     transform: scale(1.03);
 }
-/*the border of the card header. its color is --card-border
+/*the border of the card header. its color is --cardBorder
 margin-top negative to raise the header above the card
 border-radius rounds the corners of the header
 */
 .cardHeader {
-    border: 1px solid var(--card-border); 
+    border: 1px solid var(--cardBorder); 
     margin-top: -20px; 
     border-radius: 8px; 
     text-align: center;
@@ -102,13 +102,13 @@ keeps space around the discription and header*/
 /*rounds the border of the code cards
 sets the width of the element relative to the card
 puts space between the edge of the code section and card
-border around code --card-border
+border around code --cardBorder
 highlights all code text when selected*/
 .cardContent{ 
     border-radius: 8px; 
     width: 100%; 
     padding: 10px; 
-    border: 1px solid var(--card-border); 
+    border: 1px solid var(--cardBorder); 
     user-select: all; 
 }
 /*i'm honestly really not sure why this effects the background the way it does*/
@@ -116,18 +116,19 @@ highlights all code text when selected*/
     color: white; 
     background-color: black; 
 }
-/*gradient background for code sections. top color is --gradient-top and bottom color is --gradient-bottom*/
-.cardContent, .cardCode { background-image: linear-gradient(var(--gradient-top) 0%, var(--gradient-bottom) 100%); 
+/*gradient background for code sections. top color is ---gradientTop and bottom color is ---gradientBottom*/
+.cardContent, .cardCode { background-image: linear-gradient(var(---gradientTop) 0%, var(---gradientBottom) 100%); 
 }
-/*sets the color of the cards to --card-bg*/
+/*sets the color of the cards to --cardBackground*/
 .cardHeader,.cardDescription,.cardCode,.cardContent,.card { 
-    background-color: var(--card-bg); 
+    background-color: var(--cardBackground); 
 }
-/*Centers the footer and colors it --footer-text*/
-footer {
-     text-align: center; 
-     color: var(--footer-text); 
-    }
+/*Centers the footer and colors it --footerText*/
+    a{
+    text-align: center;
+    padding-left: 50%;
+    color: var(--footerText); 
+}
 
 /*If the screen is less than 992px wide, it will organise into 2 columns*/
 @media screen and (max-width: 992px) {
